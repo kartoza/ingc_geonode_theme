@@ -6758,7 +6758,7 @@ div#user_messages {
   right: 300px;
 }
 body {
-  background: #333333;
+  background: white;
   font-family: 'Lato', sans-serif;
   font-size: 24px;
   padding-top: 60px;
@@ -6830,7 +6830,7 @@ article.tab-pane {
 /* ------ Nav
 ------------------------------ */
 .navbar-inverse {
-  background-color: white;
+  background-color: rgba(74, 74, 74, 0.3);
   border: 0;
 }
 .navbar-inverse .navbar-nav > li > a {
@@ -6918,10 +6918,10 @@ article.tab-pane {
 /* ------ Home
 ------------------------------ */
 .home .navbar-inverse {
-  background-color: white;
+  background-color: rgba(74, 74, 74, 0.3);
 }
 .home #wrap {
-  margin-top: -70px;
+  margin-top: 5px;
   padding-bottom: 0;
 }
 .home .jumbotron {
@@ -6929,6 +6929,7 @@ article.tab-pane {
   color: white;
   margin-bottom: 0;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  padding: 0 0 3.75em !important;
 }
 .home .jumbotron a {
   color: #ff8f31;
@@ -6949,6 +6950,7 @@ article.tab-pane {
 }
 .home .big-search {
   color: white;
+  background-color: transparent;
   padding-bottom: 3em;
   padding-top: 1em;
 }
@@ -7059,6 +7061,7 @@ article.tab-pane {
   background: #2c689c;
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  margin-top: 0px;
 }
 .jumbotron a {
   color: #ff8f31;

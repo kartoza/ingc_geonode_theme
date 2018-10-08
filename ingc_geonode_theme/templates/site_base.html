@@ -1,12 +1,216 @@
 {% extends "base.html" %}
+{% load i18n avatar_tags %}
 {% block extra_head %}
       <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
 {% endblock %}
-{% block extra_tab %}
-{% comment %}
-Add Tab for Third Party Apps
-<li>
- <a href="{{ PROJECT_ROOT }}app">App</a>
-</li>
-{% endcomment %}
-{% endblock %}
+
+ <!-- Navbar -->
+    {% block header %}
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+        <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	        <i class="fa fa-navicon fa-lg"></i>
+	      </button>
+	      <a class="navbar-brand" href="{% url "home" %}">GeoNode</a>
+	    </div>
+	    <div id="navbar" class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav toolbar">
+	        {% block tabs %}
+            <li>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "About" %}<i class="fa fa-angle-down fa-lg"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
+                <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
+                <li><a href="{% url "group_category_list" %}">{% trans "Group Categories" %}</a></li>
+                {% if perms.announcements.can_manage %}
+                <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
+                {% endif %}
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url "geonode.invitations:geonode-send-invite" %}">{% trans "Invite Users" %}</a></li>
+                {% if user.is_superuser %}
+                <li><a href="/admin/people/profile/add/">{% trans "Add User" %}</a></li>
+                <li><a href="{% url "group_create" %}">{% trans "Create Group" %}</a></li>
+                {% endif %}
+              </ul>
+            </li>
+            <li id="nav_maps">
+              {% if user.is_authenticated %}
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Maps" %}<i class="fa fa-angle-down fa-lg"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore Maps" %}</a></li>
+                <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
+              </ul>
+              {% else %}
+              <a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Maps" %}</a>
+              {% endif %}
+            </li>
+	        <li id="nav_layers">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Data" %}<i class="fa fa-angle-down fa-lg"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Layers" %}</a></li>
+                <li><a href="{% url "document_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Documents" %}</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url "services" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Remote Services" %}</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url "layer_upload" %}">Upload Layer</a></li>
+                {% if 'geonode.contrib.createlayer' in INSTALLED_APPS %}
+                  <li><a href="{% url "layer_create" %}">{% trans "Create Layer" %}</a></li>
+                {% endif %}
+                <li><a href="{% url "document_upload" %}">Upload Document</a></li>
+                <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
+                {% endif %}
+              </ul>
+            </li>
+
+	    {% block extra_tab %}
+            <li class="dropdown" id="nav_geosafe">
+                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                       {% trans "GeoSAFE" %}
+                       <i class="fa fa-angle-down fa-lg"></i>
+                   </a>
+                   <ul class="dropdown-menu">
+                       <li><a href="{% url "geosafe:metasearch" %}">{% trans "MetaSearch" %}</a></li>
+                       <li><a href="{% url "geosafe:analysis-create" %}">{% trans "Create Analysis" %}</a></li>
+                       <li><a href="{% url "geosafe:analysis-list" %}">{% trans "Analysis List" %}</a></li>
+                   </ul>
+               </li>
+            {% endblock %}
+            {% endblock %}
+          </ul>
+	      <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a style="background-color: #1a6c38;color: white;" class="btn btn-success btn-sm" href="{% url "geosafe:analysis-create" %}">
+                    Run Analysis
+            </a>
+              </li>
+            {% if user.is_authenticated %}
+            <li>
+              <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                {% autoescape off %}{% avatar user 42 %}{% endautoescape %}
+                {% with full_name=user.first_name|add:' '|add:user.last_name %}
+                  {% if full_name.strip %}
+                    {{ full_name | truncatechars:20 }}
+                  {% else %}
+                    {{ user.username | truncatechars:20 }}
+                  {% endif %}
+                {% endwith %}
+                <i class="fa fa-angle-down fa-lg"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="{{ user.get_absolute_url }}">{% trans "Profile" %}</a></li>
+                <li><a href="{% url "recent-activity" %}">{% trans "Recent Activity" %}</a></li>
+                <li><a href="{% url "messages_inbox" %}">{% trans "Inbox" %}</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url "admin:index" %}">Admin</a></li>
+                {% if 'geonode.geoserver' in INSTALLED_APPS %}
+                <li><a href="{% url "proxy" %}?url={{ GEOSERVER_LOCAL_URL }}web">GeoServer</a></li>
+                {% endif %}
+                {% if user.is_superuser and USE_MONITORING %}
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url "monitoring:index" %}">{% trans "Monitoring" %}</a></li>
+                {% endif %}
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url "help" %}">{% trans "Help" %}</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/account/logout/">Logout</a></li>
+                </ul>
+              </li>
+		      {% else %}
+		      <li><a href="#" data-toggle="modal" data-target="#SigninModal" role="button">
+                  <img width="32" height="36" src="{{ STATIC_URL }}geonode/img/profile-icon.png" /></a></li>
+              {% endif %}
+            </ul>
+          </div> <!--/.nav-collapse -->
+        </div>
+      </nav>
+      {% endblock header %}
+      <!-- End of Navbar -->
+
+{% block footer %}
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 pull-left">
+          <img class="ingc-logo" src="{{ STATIC_URL }}geonode/img/ingc-logo.png" />
+        </div>
+<!-- div class="center-block" -->
+        <div class="col-md-1 col-lg-2">
+          <ul class="list-unstyled">
+            <li>About</li>
+            <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
+            <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
+            {% if perms.announcements.can_manage %}
+            <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
+            {% endif %}
+            <li><a href="{% url "geonode.invitations:geonode-send-invite" %}">{% trans "Invite Users" %}</a></li>
+            {% if user.is_superuser %}
+            <li><a href="/admin/people/profile/add/">{% trans "Add User" %}</a></li>
+            <li><a href="{% url "group_create" %}">{% trans "Create Group" %}</a></li>
+            {% endif %}
+          </ul>
+        </div>
+        <div class="col-md-1 col-lg-2">
+          <ul class="list-unstyled">
+            <li>Maps</li>
+            <li><a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore Maps" %}</a></li>
+            {% if user.is_authenticated %}
+            <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
+            {% endif %}
+          </ul>
+        </div>
+        <div class="col-md-1 col-lg-1">
+          <ul class="list-unstyled">
+            <li>Data</li>
+            <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Layers" %}</a></li>
+            <li><a href="{% url "document_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Documents" %}</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url "services" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Remote Services" %}</a></li>
+            <li><a href="{% url "layer_upload" %}">Upload Layer</a></li>
+            {% if 'geonode.contrib.createlayer' in INSTALLED_APPS %}
+              <li><a href="{% url "layer_create" %}">{% trans "Create Layer" %}</a></li>
+            {% endif %}
+            <li><a href="{% url "document_upload" %}">Upload Document</a></li>
+            <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
+            {% endif %}
+          </ul>
+        </div>
+        <div class="col-md-1 col-lg-1">
+          <ul class="list-unstyled">
+              <li><a href="{% url "developer" %}">{% trans "Developers" %}</a>&nbsp;|</li>
+              <li><a href="{% url "about" %}">{% trans "About" %}</a><li>
+          </ul>
+        </div>
+          <div class="col-md-2">
+                    <label class="hidden">{% trans "Language" %}</label>
+              {% if csrf_token != "NOTPROVIDED" %}
+              {% get_current_language as LANGUAGE %}
+              <form class="form-inline" action="/i18n/setlang/" method="post">
+              {% csrf_token %}
+                <select class="col-md-6" name="language" onchange="javascript:form.submit()">
+                  {% for lang in LANGUAGES %}
+                  <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                    {{ lang.1 }}
+                  </option>
+                  {% endfor %}
+                </select>
+              </form>
+              {% endif %}
+          </div>
+<!-- /div -->
+        <div class="col-md-2 pull-right">
+          <img class="wb-logo" src="{{ STATIC_URL }}geonode/img/wb-logo.png" />
+
+        </div>
+      </div>
+      <div class="row">
+            <p style="font-size: small; text-align: center; margin-top: 10px">
+                To contribute to the GeoSAFE project or to report any issues,
+                head over to the <a href="https://github.com/kartoza/geosafe"
+                target="_blank">GeoSAFE</a> repository.
+            </p>
+      </div>
+    </div>
+  </footer>
+  {% endblock footer %}
+
