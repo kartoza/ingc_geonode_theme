@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[inasafe.ingc]
+file_filter = ingc_geonode_theme/locale/<lang>/LC_MESSAGES/django.po
+source_file = ingc_geonode_theme/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
