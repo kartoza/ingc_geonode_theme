@@ -81,7 +81,7 @@
 	      <ul class="nav navbar-nav navbar-right">
           <li>
             <a style="background-color: #1a6c38;color: white;" class="btn btn-success btn-sm" href="{% url "geosafe:analysis-create" %}">
-                    Run Analysis
+                    {% trans "Run Analysis" %}
             </a>
               </li>
             {% if user.is_authenticated %}
@@ -102,7 +102,7 @@
                 <li><a href="{% url "recent-activity" %}">{% trans "Recent Activity" %}</a></li>
                 <li><a href="{% url "messages_inbox" %}">{% trans "Inbox" %}</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="{% url "admin:index" %}">Admin</a></li>
+                <li><a href="{% url "admin:index" %}">{% trans "Admin" %}</a></li>
                 {% if 'geonode.geoserver' in INSTALLED_APPS %}
                 <li><a href="{% url "proxy" %}?url={{ GEOSERVER_LOCAL_URL }}web">GeoServer</a></li>
                 {% endif %}
@@ -113,7 +113,7 @@
                 <li role="separator" class="divider"></li>
                 <li><a href="{% url "help" %}">{% trans "Help" %}</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="/account/logout/">Logout</a></li>
+                <li><a href="/account/logout/">{% trans "Logout" %}</a></li>
                 </ul>
               </li>
 		      {% else %}
@@ -137,7 +137,7 @@
 <!-- div class="center-block" -->
         <div class="col-md-1 col-lg-2">
           <ul class="list-unstyled">
-            <li>About</li>
+            <li>{% trans "About" %}</li>
             <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
             <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
             {% if perms.announcements.can_manage %}
@@ -152,7 +152,7 @@
         </div>
         <div class="col-md-1 col-lg-2">
           <ul class="list-unstyled">
-            <li>Maps</li>
+            <li>{% trans "Maps" %}</li>
             <li><a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore Maps" %}</a></li>
             {% if user.is_authenticated %}
             <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
@@ -161,7 +161,7 @@
         </div>
         <div class="col-md-1 col-lg-1">
           <ul class="list-unstyled">
-            <li>Data</li>
+            <li>{% trans "Data" %}</li>
             <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Layers" %}</a></li>
             <li><a href="{% url "document_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Documents" %}</a></li>
             {% if user.is_authenticated %}
@@ -205,9 +205,9 @@
       </div>
       <div class="row">
             <p style="font-size: small; text-align: center; margin-top: 10px">
-                To contribute to the GeoSAFE project or to report any issues,
-                head over to the <a href="https://github.com/kartoza/geosafe"
-                target="_blank">GeoSAFE</a> repository.
+                {% trans "To contribute to the GeoSAFE project or to report any issues," %}
+                {% trans "head over to the " %}<a href="https://github.com/kartoza/geosafe"
+                target="_blank">GeoSAFE</a> {% trans "repository." %}
             </p>
       </div>
     </div>

@@ -38,20 +38,20 @@
                 </td>
                 <td>
                     <a style="font-size: 32px;font-weight: 900;" class="btn btn-warning btn-lg pull-right font-white" href="{% url "geosafe:analysis-create" %}">
-                        Run Analysis
+                        {% trans "Run Analysis" %}
                     </a>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <p style="font-size: 1.5em;">
-                        This platform is part of an initiative where the Govern of Mozambique and World Bank has been
-                        promoting the use of open geospatial data for government disaster risk management thgough the
-                        Open Data for Resilience Initiative to provide technical assistance to INGC (National Disasters)
-                        Management Institute) around the management and use of geospatial data to fulfil their core mandate
-                        and activities, particularly regarding contingecny planning and emergency response. That aims to
-                        improve the capacity to respond to disasters and to build the resilience of key public infrastructure in
-                        hazard-prone areas.
+                        {% trans "This platform is part of an initiative where the Govern of Mozambique and World Bank has been"  %}
+                        {% trans "promoting the use of open geospatial data for government disaster risk management thgough the"  %}
+                        {% trans "Open Data for Resilience Initiative to provide technical assistance to INGC (National Disasters)"  %}
+                        {% trans "Management Institute) around the management and use of geospatial data to fulfil their core mandate"  %}
+                        {% trans "and activities, particularly regarding contingecny planning and emergency response. That aims to"  %}
+                        {% trans "improve the capacity to respond to disasters and to build the resilience of key public infrastructure in"  %}
+                        {% trans "hazard-prone areas."  %}
                     </p>
                 </td>
             </tr>
@@ -73,22 +73,22 @@
                       <td style="vertical-align: top;">
                           <ol style="margin: 5px 50px;">
                               <li>
-                                  <b>Perform Analysis</b>
+                                  <b>{% trans "Perform Analysis"  %}</b>
                                   <p>
-                                      Perform an InaSAFE analysis using hazard and exposure data hosted on GeoNode.
-                                      Visualize the InaSAFE analysis results as a map and infographic, and as downloadable PDF reports.
+                                      {% trans "Perform an InaSAFE analysis using hazard and exposure data hosted on GeoNode."  %}
+                                      {% trans "Visualize the InaSAFE analysis results as a map and infographic, and as downloadable PDF reports."  %}
                                   </p>
                               </li>
                               <li>
-                                  <b>Analysis List</b>
+                                  <b>{% trans "Analysis List"  %}</b>
                                   <p>
-                                      Browse previously run InaSAFE analysis results and visualize the map and report products for each analysis.
+                                      {% trans "Browse previously run InaSAFE analysis results and visualize the map and report products for each analysis."  %}
                                   </p>
                               </li>
                               <li>
-                                  <b>Metasearch</b>
+                                  <b>{% trans "Metasearch" %}</b>
                                   <p>
-                                      Search for datasets in other online geospatial data stores that publish their catalogues using the CSW standard.
+                                      {% trans "Search for datasets in other online geospatial data stores that publish their catalogues using the CSW standard." %}
                                   </p>
                               </li>
                           </ol>
@@ -114,7 +114,7 @@
   <div class="row green font-white safe-section">
     <div class="container">
         <div class="white-triangle"></div>
-        <h1>How to run an Analysis?</h1>
+        <h1>{% trans "How to run an Analysis?" %}</h1>
               <table style="margin: 25px 0px;">
                   <tr>
                       <td>
@@ -123,18 +123,18 @@
                       <td>
                           <ol style="margin: 5px 50px;">
                               <li>
-                                  Select an exposure layer (e.g. road, structure, population)
+                                  {% trans "Select an exposure layer (e.g. road, structure, population)" %}
                               </li>
                               <li>
-                                  Select a hazard layer (e.g. flood, tsunami, earthquake, volcano, and volcanic ash)
+                                  {% trans "Select a hazard layer (e.g. flood, tsunami, earthquake, volcano, and volcanic ash)" %}
                               </li>
                               <li>
-                                  Select an impact function
+                                  {% trans "Select an impact function" %}
                               </li>
                           </ol>
                             <p style="margin-left: 65px;">
                                 <a style="font-size: 32px;font-weight: 900;" class="btn btn-warning btn-lg font-white" href="{% url "geosafe:analysis-create" %}">
-                                    Run Analysis
+                                    {% trans "Run Analysis" %}
                                 </a>
                             </p>
                       </td>
