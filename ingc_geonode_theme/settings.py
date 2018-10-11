@@ -20,12 +20,28 @@
 
 # Django settings for the GeoNode project.
 import os
+import sys
+import importlib
+
 # Load more settings from a file called local_settings.py if it exists
 try:
     from ingc_geonode_theme.local_settings import *
 #    from geonode.local_settings import *
 except ImportError:
-    from geonode.settings import *
+    # Load from current settings file
+    settings_file = os.environ.get(
+        'DJANGO_SETTINGS_MODULE', 'geonode.settings')
+    if settings_file not in sys.modules:
+        current_settings = importlib.import_module(settings_file)
+        sys.modules[settings_file] = current_settings
+    else:
+        current_settings = sys.modules[settings_file]
+
+    locals().update(
+    {
+        k: getattr(current_settings, k)
+        for k in dir(current_settings) if not k.startswith('_')
+    })
 
 #
 # General Django development settings
@@ -38,9 +54,9 @@ if not SITEURL.endswith('/'):
 
 SITENAME = os.getenv("SITENAME", 'ingc_geonode_theme')
 
-# Defines the directory that contains the settings file as the LOCAL_ROOT
+# Defines the directory that contains the settings file as the _LOCAL_ROOT
 # It is used for relative settings elsewhere.
-LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
+_LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 WSGI_APPLICATION = "{}.wsgi.application".format(PROJECT_NAME)
 
@@ -57,20 +73,22 @@ ROOT_URLCONF = os.getenv('ROOT_URLCONF', '{}.urls'.format(PROJECT_NAME))
 
 # Additional directories which hold static files
 STATICFILES_DIRS.append(
-    os.path.join(LOCAL_ROOT, "static"),
+    os.path.join(_LOCAL_ROOT, "static"),
 )
 
-# App location
+if not THEME_APP_PATH:
+    # Prioritize custom translations
+    LOCALE_PATHS = list(LOCALE_PATHS)
+    LOCALE_PATHS.insert(0, '{}/locale'.format(_LOCAL_ROOT))
 
-_app_loc = os.path.dirname(__file__)
+    # Prioritize custom theme
+    template_dirs = list(TEMPLATES[0]['DIRS'])
+    template_dirs.insert(0, '{}/templates'.format(_LOCAL_ROOT))
 
+    TEMPLATES[0]['DIRS'] = template_dirs
 
-# Prioritize custom translations
-LOCALE_PATHS = list(LOCALE_PATHS)
-LOCALE_PATHS.insert(0, '{}/locale'.format(_app_loc))
-
-# Prioritize custom theme
-template_dirs = list(TEMPLATES[0]['DIRS'])
-template_dirs.insert(0, '{}/templates'.format(_app_loc))
-
-TEMPLATES[0]['DIRS'] = template_dirs
+# Define language list for INGC
+LANGUAGES = (
+    ('pt', 'Portuguese'),
+    ('en', 'English'),
+)
