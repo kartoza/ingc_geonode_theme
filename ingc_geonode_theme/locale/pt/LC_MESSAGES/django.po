@@ -20,101 +20,101 @@ msgstr ""
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:62
 msgid "List of Analysis"
-msgstr ""
+msgstr "Lista de análise"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:68
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:73
 msgid "Anonymous"
-msgstr ""
+msgstr "Anônimo"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:75
 msgid "Current users"
-msgstr ""
+msgstr "Usuários atuais"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:82
 msgid "User"
-msgstr ""
+msgstr "Usuário"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:83
 msgid "Date Created"
-msgstr ""
+msgstr "Data Criada"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:88
 msgid "Impact Function Name"
-msgstr ""
+msgstr "Nome da Função de Impacto"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:89
 msgid "Result"
-msgstr ""
+msgstr "Resultado"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:90
 msgid "View"
-msgstr ""
+msgstr "Visão"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:92
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:94
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:187
 msgid "Download"
-msgstr ""
+msgstr "Baixar"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:107
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:189
 msgid "Result not yet created"
-msgstr ""
+msgstr "Resultado ainda não criado"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:127
 msgid "Analysis not yet running"
-msgstr ""
+msgstr "Análise ainda não está em execução"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:129
 msgid "Duration:"
-msgstr ""
+msgstr "Duração:"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:131
 msgid "Task Status:"
-msgstr ""
+msgstr "Status da Tarefa:"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:132
 msgid "Start Time:"
-msgstr ""
+msgstr "Hora de início:"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:138
 msgid "Rerun Analysis"
-msgstr ""
+msgstr "Execute novamente a análise"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:146
 msgid "Cancel Analysis"
-msgstr ""
+msgstr "Cancelar análise"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:154
 msgid "Analysis Page"
-msgstr ""
+msgstr "Página de análise"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:158
 msgid "Map Report"
-msgstr ""
+msgstr "Relatório de Mapa"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:163
 msgid "Table Report"
-msgstr ""
+msgstr "Relatório de tabela"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:177
 msgid "PROCESSING"
-msgstr ""
+msgstr "EM PROCESSAMENTO"
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:197
 msgid "No analysis yet."
-msgstr ""
+msgstr "Nenhuma análise ainda."
 
 #: ingc_geonode_theme/templates/geosafe/analysis/list.html:197
-msgid "Why not creating one?"
-msgstr ""
+msgid "Why not create one?"
+msgstr "Por que não criar um?"
 
 #: ingc_geonode_theme/templates/index.html:6
 #: ingc_geonode_theme/templates/site_index.html:6
@@ -380,4 +380,4 @@ msgstr "vou a "
 
 #: ingc_geonode_theme/templates/site_base.html:210
 msgid "repository."
-msgstr ""
+msgstr "repositório."
