@@ -2,277 +2,379 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 02:22-0500\n"
+"POT-Creation-Date: 2018-10-11 22:01-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:62
+msgid "List of Analysis"
+msgstr "List of Analysis"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:68
+msgid "All"
+msgstr "All"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:73
+msgid "Anonymous"
+msgstr "Anonymous"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:75
+msgid "Current users"
+msgstr "Current users"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:82
+msgid "User"
+msgstr "User"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:83
+msgid "Date Created"
+msgstr "Date Created"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:88
+msgid "Impact Function Name"
+msgstr "Impact Function Name"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:89
+msgid "Result"
+msgstr "Result"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:90
+msgid "View"
+msgstr "View"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:92
+msgid "Save"
+msgstr "Save"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:94
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:187
+msgid "Download"
+msgstr "Download"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:107
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:189
+msgid "Result not yet created"
+msgstr "Result not yet created"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:127
+msgid "Analysis not yet running"
+msgstr "Analysis not yet running"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:129
+msgid "Duration:"
+msgstr "Duration:"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:131
+msgid "Task Status:"
+msgstr "Task Status:"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:132
+msgid "Start Time:"
+msgstr "Start Time:"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:138
+msgid "Rerun Analysis"
+msgstr "Rerun Analysis"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:146
+msgid "Cancel Analysis"
+msgstr "Cancel Analysis"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:154
+msgid "Analysis Page"
+msgstr "Analysis Page"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:158
+msgid "Map Report"
+msgstr "Map Report"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:163
+msgid "Table Report"
+msgstr "Table Report"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:177
+msgid "PROCESSING"
+msgstr "PROCESSING"
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:197
+msgid "No analysis yet."
+msgstr "No analysis yet."
+
+#: ingc_geonode_theme/templates/geosafe/analysis/list.html:197
+msgid "Why not creating one?"
+msgstr "Why not creating one?"
 
 #: ingc_geonode_theme/templates/index.html:6
 #: ingc_geonode_theme/templates/site_index.html:6
 msgid "Welcome!"
-msgstr ""
+msgstr "Welcome!"
 
 #: ingc_geonode_theme/templates/index.html:15
 msgid "Realistic Natural Hazard Impact analysis -"
-msgstr ""
+msgstr "Realistic Natural Hazard Impact analysis -"
 
 #: ingc_geonode_theme/templates/index.html:16
 msgid "InaSAFE made easy."
-msgstr ""
+msgstr "InaSAFE made easy."
 
 #: ingc_geonode_theme/templates/index.html:37
 msgid "What is it all about?"
-msgstr ""
+msgstr "What is it all about?"
 
 #: ingc_geonode_theme/templates/index.html:41
-#: ingc_geonode_theme/templates/index.html:137
+#: ingc_geonode_theme/templates/index.html:133
 #: ingc_geonode_theme/templates/site_base.html:84
 msgid "Run Analysis"
-msgstr ""
+msgstr "Run Analysis"
 
 #: ingc_geonode_theme/templates/index.html:48
 msgid ""
-"This platform is part of an initiative where the Govern of Mozambique and "
-"World Bank has been"
+"This platform is part of an initiative where the Government of Mozambique "
+"and the World Bank have been promoting the use of open geospatial data for "
+"government disaster risk management through the Open Data for Resilience "
+"Initiative to provide technical assistance to INGC"
 msgstr ""
+"This platform is part of an initiative where the Government of Mozambique "
+"and the World Bank have been promoting the use of open geospatial data for "
+"government disaster risk management through the Open Data for Resilience "
+"Initiative to provide technical assistance to INGC"
 
 #: ingc_geonode_theme/templates/index.html:49
 msgid ""
-"promoting the use of open geospatial data for government disaster risk "
-"management thgough the"
+"(National Disaster Management Institute) for the management and use of "
+"geospatial data to fulfil their core mandate and activities, particularly "
+"regarding contingency planning and emergency response."
 msgstr ""
+"(National Disaster Management Institute) for the management and use of "
+"geospatial data to fulfil their core mandate and activities, particularly "
+"regarding contingency planning and emergency response."
 
 #: ingc_geonode_theme/templates/index.html:50
 msgid ""
-"Open Data for Resilience Initiative to provide technical assistance to INGC "
-"(National Disasters)"
+"The aim is to improve the capacity to respond to disasters and to build the "
+"resilience of key public infrastructure in hazard-prone areas."
 msgstr ""
+"The aim is to improve the capacity to respond to disasters and to build the "
+"resilience of key public infrastructure in hazard-prone areas."
 
-#: ingc_geonode_theme/templates/index.html:51
-msgid ""
-"Management Institute) around the management and use of geospatial data to "
-"fulfil their core mandate"
-msgstr ""
-
-#: ingc_geonode_theme/templates/index.html:52
-msgid ""
-"and activities, particularly regarding contingecny planning and emergency "
-"response. That aims to"
-msgstr ""
-
-#: ingc_geonode_theme/templates/index.html:53
-msgid ""
-"improve the capacity to respond to disasters and to build the resilience of "
-"key public infrastructure in"
-msgstr ""
-
-#: ingc_geonode_theme/templates/index.html:54
-msgid "hazard-prone areas."
-msgstr ""
-
-#: ingc_geonode_theme/templates/index.html:76
+#: ingc_geonode_theme/templates/index.html:72
 msgid "Perform Analysis"
-msgstr ""
+msgstr "Perform Analysis"
 
-#: ingc_geonode_theme/templates/index.html:78
+#: ingc_geonode_theme/templates/index.html:74
 msgid ""
-"Perform an InaSAFE analysis using hazard and exposure data hosted on GeoNode."
+"Perform an InaSAFE analysis using hazard and exposure data hosted on "
+"GeoNode."
 msgstr ""
+"Perform an InaSAFE analysis using hazard and exposure data hosted on "
+"GeoNode."
 
-#: ingc_geonode_theme/templates/index.html:79
+#: ingc_geonode_theme/templates/index.html:75
 msgid ""
 "Visualize the InaSAFE analysis results as a map and infographic, and as "
 "downloadable PDF reports."
 msgstr ""
+"Visualize the InaSAFE analysis results as a map and infographic, and as "
+"downloadable PDF reports."
 
-#: ingc_geonode_theme/templates/index.html:83
+#: ingc_geonode_theme/templates/index.html:79
 #: ingc_geonode_theme/templates/site_base.html:75
 msgid "Analysis List"
-msgstr ""
+msgstr "Analysis List"
 
-#: ingc_geonode_theme/templates/index.html:85
+#: ingc_geonode_theme/templates/index.html:81
 msgid ""
 "Browse previously run InaSAFE analysis results and visualize the map and "
 "report products for each analysis."
 msgstr ""
+"Browse previously run InaSAFE analysis results and visualize the map and "
+"report products for each analysis."
 
-#: ingc_geonode_theme/templates/index.html:89
+#: ingc_geonode_theme/templates/index.html:85
 msgid "Metasearch"
-msgstr ""
+msgstr "Metasearch"
 
-#: ingc_geonode_theme/templates/index.html:91
+#: ingc_geonode_theme/templates/index.html:87
 msgid ""
 "Search for datasets in other online geospatial data stores that publish "
 "their catalogues using the CSW standard."
 msgstr ""
+"Search for datasets in other online geospatial data stores that publish "
+"their catalogues using the CSW standard."
 
-#: ingc_geonode_theme/templates/index.html:117
+#: ingc_geonode_theme/templates/index.html:113
 msgid "How to run an Analysis?"
-msgstr ""
+msgstr "How to run an Analysis?"
 
-#: ingc_geonode_theme/templates/index.html:126
+#: ingc_geonode_theme/templates/index.html:122
 msgid "Select an exposure layer (e.g. road, structure, population)"
-msgstr ""
+msgstr "Select an exposure layer (e.g. road, structure, population)"
 
-#: ingc_geonode_theme/templates/index.html:129
+#: ingc_geonode_theme/templates/index.html:125
 msgid ""
 "Select a hazard layer (e.g. flood, tsunami, earthquake, volcano, and "
 "volcanic ash)"
 msgstr ""
+"Select a hazard layer (e.g. flood, tsunami, earthquake, volcano, and "
+"volcanic ash)"
 
-#: ingc_geonode_theme/templates/index.html:132
+#: ingc_geonode_theme/templates/index.html:128
 msgid "Select an impact function"
-msgstr ""
+msgstr "Select an impact function"
 
 #: ingc_geonode_theme/templates/site_base.html:21
+#: ingc_geonode_theme/templates/site_base.html:140
 #: ingc_geonode_theme/templates/site_base.html:181
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: ingc_geonode_theme/templates/site_base.html:23
 #: ingc_geonode_theme/templates/site_base.html:141
 msgid "People"
-msgstr ""
+msgstr "People"
 
 #: ingc_geonode_theme/templates/site_base.html:24
 #: ingc_geonode_theme/templates/site_base.html:142
 msgid "Groups"
-msgstr ""
+msgstr "Groups"
 
 #: ingc_geonode_theme/templates/site_base.html:25
 msgid "Group Categories"
-msgstr ""
+msgstr "Group Categories"
 
 #: ingc_geonode_theme/templates/site_base.html:27
 #: ingc_geonode_theme/templates/site_base.html:144
 msgid "Announcements"
-msgstr ""
+msgstr "Announcements"
 
 #: ingc_geonode_theme/templates/site_base.html:30
 #: ingc_geonode_theme/templates/site_base.html:146
 msgid "Invite Users"
-msgstr ""
+msgstr "Invite Users"
 
 #: ingc_geonode_theme/templates/site_base.html:32
 #: ingc_geonode_theme/templates/site_base.html:148
 msgid "Add User"
-msgstr ""
+msgstr "Add User"
 
 #: ingc_geonode_theme/templates/site_base.html:33
 #: ingc_geonode_theme/templates/site_base.html:149
 msgid "Create Group"
-msgstr ""
+msgstr "Create Group"
 
 #: ingc_geonode_theme/templates/site_base.html:39
 #: ingc_geonode_theme/templates/site_base.html:45
+#: ingc_geonode_theme/templates/site_base.html:155
 msgid "Maps"
-msgstr ""
+msgstr "Maps"
 
 #: ingc_geonode_theme/templates/site_base.html:41
 #: ingc_geonode_theme/templates/site_base.html:156
 msgid "Explore Maps"
-msgstr ""
+msgstr "Explore Maps"
 
 #: ingc_geonode_theme/templates/site_base.html:42
 #: ingc_geonode_theme/templates/site_base.html:158
 msgid "Create Map"
-msgstr ""
+msgstr "Create Map"
 
 #: ingc_geonode_theme/templates/site_base.html:49
+#: ingc_geonode_theme/templates/site_base.html:164
 msgid "Data"
-msgstr ""
+msgstr "Data"
 
 #: ingc_geonode_theme/templates/site_base.html:51
 #: ingc_geonode_theme/templates/site_base.html:165
 msgid "Layers"
-msgstr ""
+msgstr "Layers"
 
 #: ingc_geonode_theme/templates/site_base.html:52
 #: ingc_geonode_theme/templates/site_base.html:166
 msgid "Documents"
-msgstr ""
+msgstr "Documents"
 
 #: ingc_geonode_theme/templates/site_base.html:54
 #: ingc_geonode_theme/templates/site_base.html:168
 msgid "Remote Services"
-msgstr ""
+msgstr "Remote Services"
 
 #: ingc_geonode_theme/templates/site_base.html:58
 #: ingc_geonode_theme/templates/site_base.html:171
 msgid "Create Layer"
-msgstr ""
+msgstr "Create Layer"
 
 #: ingc_geonode_theme/templates/site_base.html:61
 #: ingc_geonode_theme/templates/site_base.html:174
 msgid "Add Remote Service"
-msgstr ""
+msgstr "Add Remote Service"
 
 #: ingc_geonode_theme/templates/site_base.html:69
 msgid "GeoSAFE"
-msgstr ""
+msgstr "GeoSAFE"
 
 #: ingc_geonode_theme/templates/site_base.html:73
 msgid "MetaSearch"
-msgstr ""
+msgstr "MetaSearch"
 
 #: ingc_geonode_theme/templates/site_base.html:74
 msgid "Create Analysis"
-msgstr ""
+msgstr "Create Analysis"
 
 #: ingc_geonode_theme/templates/site_base.html:101
 msgid "Profile"
-msgstr ""
+msgstr "Profile"
 
 #: ingc_geonode_theme/templates/site_base.html:102
 msgid "Recent Activity"
-msgstr ""
+msgstr "Recent Activity"
 
 #: ingc_geonode_theme/templates/site_base.html:103
 msgid "Inbox"
-msgstr ""
+msgstr "Inbox"
 
 #: ingc_geonode_theme/templates/site_base.html:105
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: ingc_geonode_theme/templates/site_base.html:111
 msgid "Monitoring"
-msgstr ""
+msgstr "Monitoring"
 
 #: ingc_geonode_theme/templates/site_base.html:114
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: ingc_geonode_theme/templates/site_base.html:116
 msgid "Logout"
-msgstr ""
+msgstr "Logout"
 
 #: ingc_geonode_theme/templates/site_base.html:180
 msgid "Developers"
-msgstr ""
+msgstr "Developers"
 
 #: ingc_geonode_theme/templates/site_base.html:185
 msgid "Language"
-msgstr ""
+msgstr "Language"
 
 #: ingc_geonode_theme/templates/site_base.html:208
 msgid "To contribute to the GeoSAFE project or to report any issues,"
-msgstr ""
+msgstr "To contribute to the GeoSAFE project or to report any issues,"
 
 #: ingc_geonode_theme/templates/site_base.html:209
 msgid "head over to the "
-msgstr ""
+msgstr "head over to the "
 
 #: ingc_geonode_theme/templates/site_base.html:210
 msgid "repository."
-msgstr ""
+msgstr "repository."
