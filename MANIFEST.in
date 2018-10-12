@@ -2,3 +2,4 @@ include README.rst
 include README.md
 recursive-include ingc_geonode_theme/static *
 recursive-include ingc_geonode_theme/templates *
+recursive-include ingc_geonode_theme/locale *
