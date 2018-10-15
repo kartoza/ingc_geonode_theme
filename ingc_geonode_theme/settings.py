@@ -87,6 +87,15 @@ if not THEME_APP_PATH:
 
     TEMPLATES[0]['DIRS'] = template_dirs
 
+if USE_THEME_APP and QGIS_REPORT_TEMPLATE_DIRECTORY:
+    # Override qgis report template settings for INGC
+    LOCALIZED_QGIS_REPORT_TEMPLATE = {
+        'en': os.path.join(
+            QGIS_REPORT_TEMPLATE_DIRECTORY, 'en', 'map-report.qpt'),
+        'pt': os.path.join(
+            QGIS_REPORT_TEMPLATE_DIRECTORY, 'pt', 'map-report.qpt')
+    }
+
 # Define language list for INGC
 LANGUAGES = (
     ('pt', 'Portuguese'),
