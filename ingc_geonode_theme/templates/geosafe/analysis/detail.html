@@ -1,0 +1,8 @@
+{% extends 'geosafe/analysis/detail_base.html' %}
+
+{% load staticfiles %}
+
+{% block extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'geosafe/css/site_base.css' %}" />
+{% endblock extra_head %}
