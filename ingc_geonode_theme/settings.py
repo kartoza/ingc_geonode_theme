@@ -76,26 +76,36 @@ STATICFILES_DIRS.append(
     os.path.join(_LOCAL_ROOT, "static"),
 )
 
+_LOCALE_DIR = os.path.join(_LOCAL_ROOT, 'locale')
+_TEMPLATE_DIR = os.path.join(_LOCAL_ROOT, 'templates')
+
 if not THEME_APP_PATH:
     # Prioritize custom translations
     LOCALE_PATHS = list(LOCALE_PATHS)
-    LOCALE_PATHS.insert(0, '{}/locale'.format(_LOCAL_ROOT))
+    LOCALE_PATHS.insert(0, _LOCALE_DIR)
 
     # Prioritize custom theme
     template_dirs = list(TEMPLATES[0]['DIRS'])
-    template_dirs.insert(0, '{}/templates'.format(_LOCAL_ROOT))
+    template_dirs.insert(0, _TEMPLATE_DIR)
 
     TEMPLATES[0]['DIRS'] = template_dirs
 
-    # Override qgis report template settings for INGC
-    LOCALIZED_QGIS_REPORT_TEMPLATE = {
-        'en': os.path.join(
-            template_dirs[0], 'geosafe', 'qgis_templates',
-            'en', 'map-report.qpt'),
-        'pt': os.path.join(
-            template_dirs[0], 'geosafe', 'qgis_templates',
-            'pt', 'map-report.qpt')
-    }
+# Override qgis report template settings for INGC
+_LOCALIZED_QGIS_REPORT_TEMPLATE = {
+    'en': os.path.join(
+        _TEMPLATE_DIR, 'geosafe', 'qgis_templates',
+        'en', 'map-report.qpt'),
+    'pt': os.path.join(
+        _TEMPLATE_DIR, 'geosafe', 'qgis_templates',
+        'pt', 'map-report.qpt')
+}
+
+if 'LOCALIZED_QGIS_REPORT_TEMPLATE' in locals():
+    LOCALIZED_QGIS_REPORT_TEMPLATE.update(
+        _LOCALIZED_QGIS_REPORT_TEMPLATE
+    )
+else:
+    LOCALIZED_QGIS_REPORT_TEMPLATE = _LOCALIZED_QGIS_REPORT_TEMPLATE
 
 # Define language list for INGC
 LANGUAGES = (
