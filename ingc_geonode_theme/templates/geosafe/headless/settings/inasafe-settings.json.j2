@@ -1,0 +1,384 @@
+{% extends "geosafe/headless/settings/inasafe-settings-base.json.j2" %}
+
+{% block inasafe_settings_mapping %}
+{
+  "use_debug_analysis": "false",
+  "default_value/recent/adult_ratio_field": "0.68",
+  "default_value/recent/child_ratio_field": "0.17",
+  "default_value/global/lactating_ratio_field": "0.03",
+  "default_value/global/adult_ratio_field": "0.68",
+  "visibleLayersOnlyFlag": "true",
+  "default_value/recent/disabled_ratio_field": "0.1",
+  "default_value/global/pregnant_ratio_field": "0.02",
+  "currency": "IDR",
+  "ISO19115_URL": "http://inasafe.org",
+  "default_value/global/male_ratio_field": "0.5",
+  "default_value/recent/infant_ratio_field": "0.09",
+  "disable_rounding": "false",
+  "lastCustomTemplate": "",
+  "default_value/global/disabled_ratio_field": "0.15",
+  "default_value/recent/pregnant_ratio_field": "0.02",
+  "default_value/global/elderly_ratio_field": "0.08",
+  "generate_report": "true",
+  "population_preference": {
+    "volcanic_ash": {
+      "ash_hazard_classes": {
+        "very high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 0.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        },
+        "very low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "generic_hazard_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      }
+    },
+    "dam_break": {
+      "generic_hazard_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "inundation_dam_class": {
+        "inundation_3": {
+          "displacement_rate": 0.01,
+          "affected": true
+        },
+        "inundation_2": {
+          "displacement_rate": 0.0,
+          "affected": false
+        },
+        "inundation_1": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      }
+    },
+    "hazard_generic": {
+      "generic_hazard_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      }
+    },
+    "flood": {
+      "flood_hazard_classes": {
+        "wet": {
+          "displacement_rate": 0.01,
+          "affected": true
+        },
+        "dry": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "flood_petabencana_hazard_classes": {
+        "high": {
+          "displacement_rate": 0.05,
+          "affected": true
+        },
+        "medium": {
+          "displacement_rate": 0.03,
+          "affected": true
+        },
+        "low": {
+          "displacement_rate": 0.01,
+          "affected": true
+        },
+        "use_caution": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "generic_hazard_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": true
+        },
+        "medium": {
+          "displacement_rate": 0.2,
+          "affected": true
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      }
+    },
+    "tsunami": {
+      "tsunami_hazard_population_classes_ITB": {
+        "very high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "tsunami_hazard_population_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      }
+    },
+    "cyclone": {
+      "cyclone_au_bom_hazard_classes": {
+        "category_5": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "category_4": {
+          "displacement_rate": 0.97,
+          "affected": false
+        },
+        "category_3": {
+          "displacement_rate": 0.55,
+          "affected": true
+        },
+        "category_2": {
+          "displacement_rate": 0.2,
+          "affected": true
+        },
+        "category_1": {
+          "displacement_rate": 0.0,
+          "affected": true
+        },
+        "tropical_depression": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "cyclone_sshws_hazard_classes": {
+        "category_5": {
+          "displacement_rate": 1.0,
+          "affected": true
+        },
+        "category_4": {
+          "displacement_rate": 0.99,
+          "affected": true
+        },
+        "category_3": {
+          "displacement_rate": 0.9,
+          "affected": true
+        },
+        "category_2": {
+          "displacement_rate": 0.65,
+          "affected": true
+        },
+        "category_1": {
+          "displacement_rate": 0.15,
+          "affected": true
+        },
+        "no_hurricane": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "generic_hazard_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      }
+    },
+    "volcano": {
+      "volcano_hazard_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "generic_hazard_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      }
+    },
+    "earthquake": {
+      "earthquake_mmi_scale": {
+        "X": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "IX": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "VIII": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "VII": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "VI": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "V": {
+          "displacement_rate": 0.0,
+          "affected": false
+        },
+        "IV": {
+          "displacement_rate": 0.0,
+          "affected": false
+        },
+        "III": {
+          "displacement_rate": 0.0,
+          "affected": false
+        },
+        "II": {
+          "displacement_rate": 0.0,
+          "affected": false
+        },
+        "I": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      },
+      "generic_hazard_classes": {
+        "high": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "medium": {
+          "displacement_rate": 1.0,
+          "affected": false
+        },
+        "low": {
+          "displacement_rate": 0.0,
+          "affected": false
+        }
+      }
+    }
+  },
+  "default_value/recent/youth_ratio_field": "0.27",
+  "useDefaultTemplates": "true",
+  "default_value/recent/male_ratio_field": "0.4",
+  "default_value/child_ratio_field/recent": "0.03",
+  "default_value/global/infant_ratio_field": "0.09",
+  "developer_mode": "false",
+  "default_value/infant_ratio_field/recent": "0.01",
+  "default_value/adult_ratio_field/recent": "0.66",
+  "print_atlas_report": "false",
+  "setHideExposureFlag": "false",
+  "default_value/recent/elderly_ratio_field": "0.08",
+  "default_value/recent/child_bearing_age_ratio_field": "0.5",
+  "default_value/global/female_ratio_field": "0.5",
+  "always_show_welcome_message": "false",
+  "useSelectedFeaturesOnly": "true",
+  "set_layer_from_title_flag": "true",
+  "ISO19115_ORGANIZATION": "InaSAFE.org",
+  "ISO19115_LICENSE": "Free use with accreditation",
+  "setZoomToImpactFlag": "true",
+  "template_warning_verbose": "true",
+  "default_value/recent/under_5_ratio_field": "0.2",
+  "showOrganisationLogoInDockFlag": "false",
+  "default_value/elderly_ratio_field/recent": "0.09",
+  "useSentry": "false",
+  "set_show_only_impact_on_report": "false",
+  "default_value/recent/female_ratio_field": "0.6",
+  "reportTemplatePath": "",
+  "default_value/youth_ratio_field/recent": "0.25",
+  "memory_profile": "false",
+  "default_value/global/child_ratio_field": "0.17",
+  "default_value/global/over_60_ratio_field": "0.11",
+  "reportDisclaimer": "InaSAFE has been jointly developed by the Indonesian Government-BNPB, the Australian Government, the World Bank-GFDRR and independent contributors. These agencies and the individual software developers of InaSAFE take no responsibility for the correctness of outputs from InaSAFE or decisions derived as a consequence.",
+  "default_value/recent/over_60_ratio_field": "0.1",
+  "default_value/recent/lactating_ratio_field": "0.03",
+  "default_value/global/youth_ratio_field": "0.27",
+  "lastTemplate": null,
+  "default_value/global/under_5_ratio_field": "0.09",
+  "earthquake_function": "itb_bayesian_fatality_rates",
+  "default_value/global/child_bearing_age_ratio_field": "0.26",
+  "ISO19115_EMAIL": "info@inasafe.org"
+}
+{% endblock %}
