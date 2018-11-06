@@ -53,11 +53,11 @@
                 {% if user.is_authenticated %}
                 <li><a href="{% url "services" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Remote Services" %}</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="{% url "layer_upload" %}">Upload Layer</a></li>
+                <li><a href="{% url "layer_upload" %}">{% trans "Upload Layer" %}</a></li>
                 {% if 'geonode.contrib.createlayer' in INSTALLED_APPS %}
                   <li><a href="{% url "layer_create" %}">{% trans "Create Layer" %}</a></li>
                 {% endif %}
-                <li><a href="{% url "document_upload" %}">Upload Document</a></li>
+                <li><a href="{% url "document_upload" %}">{% trans "Upload Document" %}</a></li>
                 <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
                 {% endif %}
               </ul>
