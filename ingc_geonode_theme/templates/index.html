@@ -12,39 +12,39 @@
   <div class="row white tagline">
       <div class="container">
         <div class="big-search">
-            <h2 style="text-align: center">{% trans "Realistic Natural Hazard Impact analysis -" %}</h2>
-            <h2 style="text-align: center">{% trans "InaSAFE made easy." %}</h2>
+            <h2 class="text-shade" style="text-align: center;">{% trans "Realistic Natural Hazard Impact Analysis -" %}</h2>
+            <h2 class="text-shade" style="text-align: center">{% trans "Contingency Planning Made Easy." %}</h2>
             <div class="search">
-                    <form id="search" action="{% url "search" %}" >
-                        <span class="fa fa-search"></span>
-                        {% if HAYSTACK_SEARCH %}
+                <form id="search" action="{% url "search" %}" >
+                    <span class="fa fa-search fa-2x"></span>
+                    {% if HAYSTACK_SEARCH %}
                         <input id="search_input" type="text" placeholder="Search Data" class="form-control" name="q">
-                        {% else %}
+                    {% else %}
                         <input id="search_input" type="text" placeholder="Search Data" class="form-control" name="title__icontains">
-                        {% endif %}
-                    </form>
+                    {% endif %}
+                </form>
+            </div>
+            <div class="run-analysis">
+                <a style="font-size: 26px;font-weight: 900;" class="btn btn-warning font-white" href="{% url "geosafe:analysis-create" %}">
+                    {% trans "Run Analysis" %}
+                </a>
             </div>
         </div>
       <!-- container -->
       </div>
   <!-- row -->
   </div>
-  <div class="row green about">
+  <div class="row green padding-fifty">
   	<div class="container">
         <table>
             <tr>
                 <td>
-                    <h1>{% trans "What is it all about?" %}</h1>
-                </td>
-                <td>
-                    <a style="font-size: 32px;font-weight: 900;" class="btn btn-warning btn-lg pull-right font-white" href="{% url "geosafe:analysis-create" %}">
-                        {% trans "Run Analysis" %}
-                    </a>
+                    <h1 class="text-shade">{% trans "What Is It All About?" %}</h1>
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <p style="font-size: 1.5em;">
+                <td>
+                    <p>
                         {% trans "This platform is part of an initiative where the Government of Mozambique and the World Bank have been promoting the use of open geospatial data for government disaster risk management through the Open Data for Resilience Initiative to provide technical assistance to INGC" %}
                         {% trans "(National Disaster Management Institute) for the management and use of geospatial data to fulfil their core mandate and activities, particularly regarding contingency planning and emergency response." %}
                         {% trans "The aim is to improve the capacity to respond to disasters and to build the resilience of key public infrastructure in hazard-prone areas." %}
@@ -61,10 +61,10 @@
   {% include "_messages.html" %}
   <!-- div class="row white font-grey what-section" -->
   <div class="row white font-grey what-section">
-    <div class="container">
+    <div class="green-triangle"></div>
+    <div class="container padding-fifty">
       <!-- div class="row" -->
-        <div class="green-triangle"></div>
-              <table style="margin: 25px 0px;">
+              <table class="what-can-do">
                   <tr>
                       <td style="vertical-align: top;">
                           <ol style="margin: 5px 50px;">
@@ -90,12 +90,13 @@
                           </ol>
                       </td>
                       <td>
-                                  <h1 class="font-green">What it can do?</h1>
+                                  <h1 class="font-green text-shade text-center" style="margin-top: 0px !important;">{% trans "What Can It Do?" %}</h1>
                           <div id='mySwipeWhat' class="swipe-what">
                               <div class='swipe-what-wrap'>
-                                  <div><img width="740px" height="503px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do.png' %}"/></div>
-                                  <div><img width="740px" height="503px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do_2.png' %}"/></div>
-                                  <div><img width="740px" height="503px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do_3.png' %}"/></div>
+                                  <!-- div><img width="740px" height="503px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do.png' %}"/></div -->
+                                  <div><img width="800px" height="600px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do.png' %}"/></div>
+                                  <div><img width="800px" height="600px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do_2.png' %}"/></div>
+                                  <div><img width="800px" height="600px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do_3.png' %}"/></div>
                               </div>
                           </div>
                       </td>
@@ -108,15 +109,15 @@
   </div>
 
   <div class="row green font-white safe-section">
-    <div class="container">
-        <div class="white-triangle"></div>
-        <h1>{% trans "How to run an Analysis?" %}</h1>
-              <table style="margin: 25px 0px;">
+      <div class="white-triangle"></div>
+      <div class="container padding-fifty">
+          <h1>{% trans "How To Run An Analysis?" %}</h1>
+              <table>
                   <tr>
                       <td>
-                                  <div><img src="{% static 'ingc_geonode_theme/img/laptop-run-analysis.png' %}"/></div>
+                          <div><img src="{% static 'ingc_geonode_theme/img/laptop-run-analysis.png' %}"/></div>
                       </td>
-                      <td>
+                      <td style="vertical-align: top;">
                           <ol style="margin: 5px 50px;">
                               <li>
                                   {% trans "Select an exposure layer (e.g. road, structure, population)" %}
@@ -129,7 +130,7 @@
                               </li>
                           </ol>
                             <p style="margin-left: 65px;">
-                                <a style="font-size: 32px;font-weight: 900;" class="btn btn-warning btn-lg font-white" href="{% url "geosafe:analysis-create" %}">
+                                <a style="font-size: 26px;font-weight: 900;" class="btn btn-warning fa-lg font-white" href="{% url "geosafe:analysis-create" %}">
                                     {% trans "Run Analysis" %}
                                 </a>
                             </p>
@@ -219,19 +220,17 @@
     }
 
     .safe-section {
-        padding-top: 0px;
-        padding-bottom: 50px;
         font-size: 1.5em;
     }
 
     .safe-section img {
-        width: 90%;
+        width: 75%;
         height: 0%;
     }
 
     .what-section img {
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
     }
 
     .safe-section {
@@ -239,7 +238,7 @@
     }
 
     .safe-section h1 {
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
         font-size: 56px;
         font-weight: 900;
     }
@@ -286,15 +285,18 @@
     .font-grey {
         color: #4a4a4a !important;
     }
-    .about {
-        padding: 50px 0;
+    .padding-fifty {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .text-shade {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
     }
     .tagline {
         background: url(../static/ingc_geonode_theme/img/01.jpg) no-repeat;
         -webkit-background-size:100%;
         background-size:100%;
         height: 398px;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
     }
     .green-triangle {
         background: url(../static/ingc_geonode_theme/img/green-triangle.png) no-repeat;
@@ -302,6 +304,15 @@
         height: 36px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .what-can-do {
+        margin: 25px 0px;
+    }
+    .what-can-do ol, .what-can-do b {
+        font-size: 1.5em;
+    }
+    .what-can-do p {
+        font-size: inherit;
     }
     .white-triangle {
         background: url(../static/ingc_geonode_theme/img/white-triangle.png) no-repeat;
