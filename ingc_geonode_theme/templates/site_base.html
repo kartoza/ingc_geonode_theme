@@ -129,9 +129,9 @@
 
 {% block footer %}
   <footer>
-    <div class="container">
+    <div class="container" style="margin-left: -50px;">
       <div class="row">
-        <div class="col-md-2 pull-left">
+        <div class="col-md-2">
           <img class="ingc-logo" src="{{ STATIC_URL }}ingc_geonode_theme/img/ingc-logo.png" />
         </div>
 <!-- div class="center-block" -->
@@ -157,6 +157,9 @@
             {% if user.is_authenticated %}
             <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
             {% endif %}
+              <li><a href="{% url "developer" %}">{% trans "Developers" %}</a>&nbsp;|</li>
+              <li><a href="{% url "about" %}">{% trans "About" %}</a><li>
+
           </ul>
         </div>
         <div class="col-md-1 col-lg-2">
@@ -199,7 +202,7 @@
           </ul>
         </div>
 <!-- /div -->
-        <div class="col-md-2 pull-right">
+        <div class="col-md-2">
           <img class="wb-logo" src="{{ STATIC_URL }}ingc_geonode_theme/img/wb-logo.png" />
 
         </div>
