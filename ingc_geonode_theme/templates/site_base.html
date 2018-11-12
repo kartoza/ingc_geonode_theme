@@ -159,7 +159,7 @@
             {% endif %}
           </ul>
         </div>
-        <div class="col-md-1 col-lg-1">
+        <div class="col-md-1 col-lg-2">
           <ul class="list-unstyled">
             <li>{% trans "Data" %}</li>
             <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Layers" %}</a></li>
@@ -175,28 +175,29 @@
             {% endif %}
           </ul>
         </div>
-        <div class="col-md-1 col-lg-1">
+        <div class="col-md-1 col-lg-2">
           <ul class="list-unstyled">
+              <li>
+                  <label class="hidden">{% trans "Language" %}</label>
+                  {% if csrf_token != "NOTPROVIDED" %}
+                  {% get_current_language as LANGUAGE %}
+                  <form class="form-inline" action="/i18n/setlang/" method="post">
+                  {% csrf_token %}
+                    <select class="col-md-6" name="language" onchange="javascript:form.submit()">
+                      {% for lang in LANGUAGES %}
+                      <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                        {{ lang.1 }}
+                      </option>
+                      {% endfor %}
+                    </select>
+                  </form>
+                  {% endif %}
+              </li>
               <li><a href="{% url "developer" %}">{% trans "Developers" %}</a>&nbsp;|</li>
               <li><a href="{% url "about" %}">{% trans "About" %}</a><li>
+
           </ul>
         </div>
-          <div class="col-md-2">
-                    <label class="hidden">{% trans "Language" %}</label>
-              {% if csrf_token != "NOTPROVIDED" %}
-              {% get_current_language as LANGUAGE %}
-              <form class="form-inline" action="/i18n/setlang/" method="post">
-              {% csrf_token %}
-                <select class="col-md-6" name="language" onchange="javascript:form.submit()">
-                  {% for lang in LANGUAGES %}
-                  <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
-                    {{ lang.1 }}
-                  </option>
-                  {% endfor %}
-                </select>
-              </form>
-              {% endif %}
-          </div>
 <!-- /div -->
         <div class="col-md-2 pull-right">
           <img class="wb-logo" src="{{ STATIC_URL }}ingc_geonode_theme/img/wb-logo.png" />
