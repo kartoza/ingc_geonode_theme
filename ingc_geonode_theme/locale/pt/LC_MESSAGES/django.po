@@ -7,15 +7,16 @@
 # Rizky Maulana Nugraha <lana.pcfre@gmail.com>, 2018
 # raisserafael <raisse@yahoo.com>, 2018
 # boney bun <boney@kartoza.com>, 2018
+# Gavin Fleming <gavin@kartoza.com>, 2018
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-14 21:52-0600\n"
+"POT-Creation-Date: 2018-11-15 04:33-0600\n"
 "PO-Revision-Date: 2018-10-09 10:02+0000\n"
-"Last-Translator: boney bun <boney@kartoza.com>, 2018\n"
+"Last-Translator: Gavin Fleming <gavin@kartoza.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/inasafe/teams/92273/"
 "pt/)\n"
 "Language: pt\n"
@@ -23,6 +24,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ingc_geonode_theme/settings.py:115
+msgid "hazard"
+msgstr ""
+
+#: ingc_geonode_theme/settings.py:118
+msgid "Select a flood layer"
+msgstr ""
+
+#: ingc_geonode_theme/settings.py:119
+msgid "Select an earthquake layer"
+msgstr ""
+
+#: ingc_geonode_theme/settings.py:120
+msgid "Select a cyclone layer"
+msgstr ""
 
 #: ingc_geonode_theme/templates/index.html:6
 #: ingc_geonode_theme/templates/site_index.html:6
@@ -123,7 +140,7 @@ msgstr ""
 
 #: ingc_geonode_theme/templates/index.html:93
 msgid "What Can It Do?"
-msgstr "De o quê se trata?"
+msgstr "O que é que isso pode fazer?"
 
 #: ingc_geonode_theme/templates/index.html:114
 msgid "How To Run An Analysis?"
