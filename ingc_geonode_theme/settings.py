@@ -22,6 +22,7 @@
 import os
 import sys
 import importlib
+from django.utils.translation import ugettext_lazy as _
 
 # Load more settings from a file called local_settings.py if it exists
 try:
@@ -106,6 +107,19 @@ if 'LOCALIZED_QGIS_REPORT_TEMPLATE' in locals():
     )
 else:
     LOCALIZED_QGIS_REPORT_TEMPLATE = _LOCALIZED_QGIS_REPORT_TEMPLATE
+
+# Hazard settings.
+# Do not forget to add also the icon when adding new hazard.
+HAZARD_DEFINITION = {
+    'key': 'hazard',
+    'name': _('hazard'),
+    'categories': ['flood', 'earthquake', 'cyclone'],
+    'list_titles': [
+        _('Select a flood layer'),
+        _('Select an earthquake layer'),
+        _('Select a cyclone layer'),
+    ]
+}
 
 # Define language list for INGC
 LANGUAGES = (
