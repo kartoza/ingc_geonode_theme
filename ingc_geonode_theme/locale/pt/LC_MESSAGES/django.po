@@ -6,14 +6,16 @@
 # Translators:
 # Rizky Maulana Nugraha <lana.pcfre@gmail.com>, 2018
 # raisserafael <raisse@yahoo.com>, 2018
+# boney bun <boney@kartoza.com>, 2018
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-06 23:09-0600\n"
+"POT-Creation-Date: 2018-11-14 21:52-0600\n"
 "PO-Revision-Date: 2018-10-09 10:02+0000\n"
-"Last-Translator: raisserafael <raisse@yahoo.com>, 2018\n"
+"Last-Translator: boney bun <boney@kartoza.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/inasafe/teams/92273/"
 "pt/)\n"
 "Language: pt\n"
@@ -33,7 +35,7 @@ msgstr "Análise de Impacto de Risco Natural -"
 
 #: ingc_geonode_theme/templates/index.html:16
 msgid "Contingency Planning Made Easy."
-msgstr "Planejamento de Contingência facilitado."
+msgstr "Planeamento de contigência rápido"
 
 #: ingc_geonode_theme/templates/index.html:29
 #: ingc_geonode_theme/templates/index.html:134
@@ -43,7 +45,7 @@ msgstr "Execute análise"
 
 #: ingc_geonode_theme/templates/index.html:42
 msgid "What Is It All About?"
-msgstr "De O Quê Se Trata?"
+msgstr "De o quê se trata?"
 
 #: ingc_geonode_theme/templates/index.html:48
 msgid ""
@@ -147,7 +149,7 @@ msgstr "Selecione uma função de impacto"
 
 #: ingc_geonode_theme/templates/site_base.html:21
 #: ingc_geonode_theme/templates/site_base.html:140
-#: ingc_geonode_theme/templates/site_base.html:181
+#: ingc_geonode_theme/templates/site_base.html:197
 msgid "About"
 msgstr "Sobre"
 
@@ -221,10 +223,20 @@ msgstr "Documentos"
 msgid "Remote Services"
 msgstr "Serviços Remotos"
 
+#: ingc_geonode_theme/templates/site_base.html:56
+#: ingc_geonode_theme/templates/site_base.html:169
+msgid "Upload Layer"
+msgstr "Carregar Camada"
+
 #: ingc_geonode_theme/templates/site_base.html:58
 #: ingc_geonode_theme/templates/site_base.html:171
 msgid "Create Layer"
 msgstr "Criar Camada"
+
+#: ingc_geonode_theme/templates/site_base.html:60
+#: ingc_geonode_theme/templates/site_base.html:173
+msgid "Upload Document"
+msgstr "Subir Documento"
 
 #: ingc_geonode_theme/templates/site_base.html:61
 #: ingc_geonode_theme/templates/site_base.html:174
@@ -271,94 +283,22 @@ msgstr "Ajuda"
 msgid "Logout"
 msgstr "Sair"
 
-#: ingc_geonode_theme/templates/site_base.html:180
-msgid "Developers"
-msgstr "Desenvolvedores"
-
-#: ingc_geonode_theme/templates/site_base.html:185
+#: ingc_geonode_theme/templates/site_base.html:181
 msgid "Language"
 msgstr "Língua"
 
-#: ingc_geonode_theme/templates/site_base.html:208
+#: ingc_geonode_theme/templates/site_base.html:196
+msgid "Developers"
+msgstr "Desenvolvedores"
+
+#: ingc_geonode_theme/templates/site_base.html:209
 msgid "To contribute to the GeoSAFE project or to report any issues,"
 msgstr "Para contribuir com o projeto GeoSAFE ou relatar quaisquer problemas,"
 
-#: ingc_geonode_theme/templates/site_base.html:209
+#: ingc_geonode_theme/templates/site_base.html:210
 msgid "head over to the "
 msgstr "vou a "
 
-#: ingc_geonode_theme/templates/site_base.html:210
+#: ingc_geonode_theme/templates/site_base.html:211
 msgid "repository."
 msgstr "repositório."
-
-#~ msgid "List of Analysis"
-#~ msgstr "Lista de análises"
-
-#~ msgid "All"
-#~ msgstr "Todos"
-
-#~ msgid "Anonymous"
-#~ msgstr "Anônimo"
-
-#~ msgid "Current users"
-#~ msgstr "Usuários atuais"
-
-#~ msgid "User"
-#~ msgstr "Usuário"
-
-#~ msgid "Date Created"
-#~ msgstr "Data Criada"
-
-#~ msgid "Impact Function Name"
-#~ msgstr "Nome da Função de Impacto"
-
-#~ msgid "Result"
-#~ msgstr "Resultado"
-
-#~ msgid "View"
-#~ msgstr "Visão"
-
-#~ msgid "Save"
-#~ msgstr "Guardar"
-
-#~ msgid "Download"
-#~ msgstr "Baixar"
-
-#~ msgid "Result not yet created"
-#~ msgstr "Resultado ainda não criado"
-
-#~ msgid "Analysis not yet running"
-#~ msgstr "Análise ainda não está em execução"
-
-#~ msgid "Duration:"
-#~ msgstr "Duração:"
-
-#~ msgid "Task Status:"
-#~ msgstr "Estado da Tarefa:"
-
-#~ msgid "Start Time:"
-#~ msgstr "Hora de início:"
-
-#~ msgid "Rerun Analysis"
-#~ msgstr "Executar análise"
-
-#~ msgid "Cancel Analysis"
-#~ msgstr "Cancelar análise"
-
-#~ msgid "Analysis Page"
-#~ msgstr "Página de análise"
-
-#~ msgid "Map Report"
-#~ msgstr "Relatório de Mapa"
-
-#~ msgid "Table Report"
-#~ msgstr "Relatório de tabela"
-
-#~ msgid "PROCESSING"
-#~ msgstr "EM PROCESSAMENTO"
-
-#~ msgid "No analysis yet."
-#~ msgstr "Nenhuma análise ainda."
-
-#~ msgid "Why not create one?"
-#~ msgstr "Por que não criar um?"

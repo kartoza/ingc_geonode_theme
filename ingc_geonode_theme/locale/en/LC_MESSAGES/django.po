@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-06 23:09-0600\n"
+"POT-Creation-Date: 2018-11-14 21:51-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +24,7 @@ msgstr "Welcome!"
 
 #: ingc_geonode_theme/templates/index.html:15
 msgid "Realistic Natural Hazard Impact Analysis -"
-msgstr "Realistic Natural Hazard Impact analysis -"
+msgstr "Realistic Natural Hazard Impact Analysis -"
 
 #: ingc_geonode_theme/templates/index.html:16
 msgid "Contingency Planning Made Easy."
@@ -113,8 +114,8 @@ msgstr ""
 "their catalogues using the CSW standard."
 
 #: ingc_geonode_theme/templates/index.html:93
-msgid "What It Can Do?"
-msgstr "What It Can Do?"
+msgid "What Can It Do?"
+msgstr "What Can It Do?"
 
 #: ingc_geonode_theme/templates/index.html:114
 msgid "How To Run An Analysis?"
@@ -138,7 +139,7 @@ msgstr "Select an impact function"
 
 #: ingc_geonode_theme/templates/site_base.html:21
 #: ingc_geonode_theme/templates/site_base.html:140
-#: ingc_geonode_theme/templates/site_base.html:181
+#: ingc_geonode_theme/templates/site_base.html:197
 msgid "About"
 msgstr "About"
 
@@ -212,10 +213,20 @@ msgstr "Documents"
 msgid "Remote Services"
 msgstr "Remote Services"
 
+#: ingc_geonode_theme/templates/site_base.html:56
+#: ingc_geonode_theme/templates/site_base.html:169
+msgid "Upload Layer"
+msgstr "Upload Layer"
+
 #: ingc_geonode_theme/templates/site_base.html:58
 #: ingc_geonode_theme/templates/site_base.html:171
 msgid "Create Layer"
 msgstr "Create Layer"
+
+#: ingc_geonode_theme/templates/site_base.html:60
+#: ingc_geonode_theme/templates/site_base.html:173
+msgid "Upload Document"
+msgstr "Upload Document"
 
 #: ingc_geonode_theme/templates/site_base.html:61
 #: ingc_geonode_theme/templates/site_base.html:174
@@ -262,94 +273,22 @@ msgstr "Help"
 msgid "Logout"
 msgstr "Logout"
 
-#: ingc_geonode_theme/templates/site_base.html:180
-msgid "Developers"
-msgstr "Developers"
-
-#: ingc_geonode_theme/templates/site_base.html:185
+#: ingc_geonode_theme/templates/site_base.html:181
 msgid "Language"
 msgstr "Language"
 
-#: ingc_geonode_theme/templates/site_base.html:208
+#: ingc_geonode_theme/templates/site_base.html:196
+msgid "Developers"
+msgstr "Developers"
+
+#: ingc_geonode_theme/templates/site_base.html:209
 msgid "To contribute to the GeoSAFE project or to report any issues,"
 msgstr "To contribute to the GeoSAFE project or to report any issues,"
 
-#: ingc_geonode_theme/templates/site_base.html:209
+#: ingc_geonode_theme/templates/site_base.html:210
 msgid "head over to the "
 msgstr "head over to the "
 
-#: ingc_geonode_theme/templates/site_base.html:210
+#: ingc_geonode_theme/templates/site_base.html:211
 msgid "repository."
 msgstr "repository."
-
-#~ msgid "List of Analysis"
-#~ msgstr "List of Analysis"
-
-#~ msgid "All"
-#~ msgstr "All"
-
-#~ msgid "Anonymous"
-#~ msgstr "Anonymous"
-
-#~ msgid "Current users"
-#~ msgstr "Current users"
-
-#~ msgid "User"
-#~ msgstr "User"
-
-#~ msgid "Date Created"
-#~ msgstr "Date Created"
-
-#~ msgid "Impact Function Name"
-#~ msgstr "Impact Function Name"
-
-#~ msgid "Result"
-#~ msgstr "Result"
-
-#~ msgid "View"
-#~ msgstr "View"
-
-#~ msgid "Save"
-#~ msgstr "Save"
-
-#~ msgid "Download"
-#~ msgstr "Download"
-
-#~ msgid "Result not yet created"
-#~ msgstr "Result not yet created"
-
-#~ msgid "Analysis not yet running"
-#~ msgstr "Analysis not yet running"
-
-#~ msgid "Duration:"
-#~ msgstr "Duration:"
-
-#~ msgid "Task Status:"
-#~ msgstr "Task Status:"
-
-#~ msgid "Start Time:"
-#~ msgstr "Start Time:"
-
-#~ msgid "Rerun Analysis"
-#~ msgstr "Rerun Analysis"
-
-#~ msgid "Cancel Analysis"
-#~ msgstr "Cancel Analysis"
-
-#~ msgid "Analysis Page"
-#~ msgstr "Analysis Page"
-
-#~ msgid "Map Report"
-#~ msgstr "Map Report"
-
-#~ msgid "Table Report"
-#~ msgstr "Table Report"
-
-#~ msgid "PROCESSING"
-#~ msgstr "PROCESSING"
-
-#~ msgid "No analysis yet."
-#~ msgstr "No analysis yet."
-
-#~ msgid "Why not create one?"
-#~ msgstr "Why not create one?"
