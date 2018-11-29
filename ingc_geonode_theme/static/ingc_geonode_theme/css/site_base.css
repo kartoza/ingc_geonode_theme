@@ -1573,22 +1573,128 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 100px;
-  padding-right: 100px;
+}
+.what-section img {
+  width: 100%;
+  height: 100%;
+}
+
+.safe-section img {
+  width: 100%;
+  height: 0%;
+}
+.swipe-what-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.what-can-do {
+  margin: 25px 0px;
+  table-layout: fixed;
+  width: 100%;
+  vertical-align: top;
+}
+.what-can-do li {
+  font-size: 2em;
+}
+.what-can-do p {
+  font-size: 1.5em;
+}
+column-left {
+  width: 50%;
+}
+
+column-right {
+  width: 50%;
 }
 @media (min-width: 768px) {
   .container {
     width: 750px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 50px;
+    padding-right: 0px;
+  }
+  .swipe-what {
+    overflow: hidden;
+    width: 368px;
+    position: relative;
+  }
+  .swipe-what-wrap > div {
+    float: left;
+    width: 368px;
+    position: relative;
+  }
+  .navbar-nav {
+    margin: 7.5px 0px;
+  }
+  .ingc-logo {
+    width: 120px;
+    height: 80px;
+  }
+  .wb-logo {
+    width: auto;
+    height: 60px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .swipe-what {
+    overflow: hidden;
+    width: 440px;
+    position: relative;
+  }
+  .swipe-what-wrap > div {
+    float: left;
+    width: 440px;
+    position: relative;
+  }
+  .ingc-logo {
+    width: 120px;
+    height: 80px;
+  }
+  .wb-logo {
+    width: auto;
+    height: 60px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .container {
     width: 100%;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+  }
+  .footer-margin-left {
+    margin-left: -50px;
+  }
+  .safe-section img {
+    width: 100%;
+    height: 0%;
+  }
+  .what-section img {
+        width: 100%;
+        height: 100%;
+  }
+  .swipe-what {
+    overflow: hidden;
+    width: 740px;
+    position: relative;
+  }
+  .swipe-what-wrap > div {
+    float: left;
+    width: 740px;
+    position: relative;
+  }
+  .ingc-logo {
+    width: 120px;
+    height: 80px;
+  }
+  .wb-logo {
+    width: auto;
+    height: 80px;
   }
 }
 .container-fluid {
@@ -2079,7 +2185,7 @@ pre code {
     margin-left: 0%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
@@ -4218,7 +4324,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-collapse {
-    margin-right: 20px;
+    margin-right: 0px;
     margin-left: 0;
   }
 }
@@ -4270,7 +4376,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
+    margin-left: 0px;
   }
 }
 .navbar-toggle {
@@ -4467,7 +4573,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -15px;
+    margin-right: 0px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -6631,7 +6737,7 @@ button.close {
     display: inline-block !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .visible-lg {
     display: block !important;
   }
@@ -6646,17 +6752,17 @@ button.close {
     display: table-cell !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .visible-lg-block {
     display: block !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .visible-lg-inline {
     display: inline !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .visible-lg-inline-block {
     display: inline-block !important;
   }
@@ -6676,7 +6782,7 @@ button.close {
     display: none !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .hidden-lg {
     display: none !important;
   }
@@ -7771,7 +7877,7 @@ footer form {
   }
   .navbar-nav {
     float: none!important;
-    margin: 7.5px -15px;
+/*    margin: 7.5px -15px;*/
   }
   .navbar-nav > li {
     float: none;
@@ -7901,12 +8007,4 @@ form-inline {
 #missing-values {
   color: #bd362f;
   font-style: italic;
-}
-.ingc-logo {
-  width: 120px;
-  height: 80px;
-}
-.wb-logo {
-  width: auto;
-  height: 60px;
 }

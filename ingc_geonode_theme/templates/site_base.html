@@ -130,28 +130,28 @@
 
 {% block footer %}
   <footer>
-    <div class="container" style="margin-left: -50px;">
+    <div class="container footer-margin-left">
       <div class="row">
         <div class="col-md-2">
           <img class="ingc-logo" src="{{ STATIC_URL }}ingc_geonode_theme/img/ingc-logo.png" />
         </div>
 <!-- div class="center-block" -->
-        <div class="col-md-1 col-lg-2">
+        <div class="col-md-1 col-lg-1">
           <ul class="list-unstyled">
             <li>{% trans "About" %}</li>
             <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
             <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
-            {% if perms.announcements.can_manage %}
-            <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
-            {% endif %}
             <li><a href="{% url "geonode.invitations:geonode-send-invite" %}">{% trans "Invite Users" %}</a></li>
             {% if user.is_superuser %}
             <li><a href="/admin/people/profile/add/">{% trans "Add User" %}</a></li>
             <li><a href="{% url "group_create" %}">{% trans "Create Group" %}</a></li>
             {% endif %}
+            {% if perms.announcements.can_manage %}
+            <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
+            {% endif %}
           </ul>
         </div>
-        <div class="col-md-1 col-lg-2">
+        <div class="col-md-1 col-lg-1">
           <ul class="list-unstyled">
             <li>{% trans "Maps" %}</li>
             <li><a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore Maps" %}</a></li>
@@ -160,7 +160,7 @@
             {% endif %}
           </ul>
         </div>
-        <div class="col-md-1 col-lg-2">
+        <div class="col-md-2 col-lg-2">
           <ul class="list-unstyled">
             <li>{% trans "Data" %}</li>
             <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Layers" %}</a></li>
@@ -176,7 +176,7 @@
             {% endif %}
           </ul>
         </div>
-        <div class="col-md-1 col-lg-2">
+        <div class="col-md-2 col-lg-2">
           <ul class="list-unstyled">
               <li>
                   <label class="hidden">{% trans "Language" %}</label>

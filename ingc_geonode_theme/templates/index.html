@@ -66,37 +66,34 @@
       <!-- div class="row" -->
               <table class="what-can-do">
                   <tr>
-                      <td style="vertical-align: top;">
+                      <td class="column-left">
                           <ol style="margin: 5px 50px;">
                               <li>
-                                  <b>{% trans "Perform Analysis"  %}</b>
+                                  <b>{% trans "Perform Analysis"  %}</b></li>
                                   <p>
                                       {% trans "Perform an InaSAFE analysis using hazard and exposure data hosted on GeoNode."  %}
                                       {% trans "Visualize the InaSAFE analysis results as a map and infographic, and as downloadable PDF reports."  %}
                                   </p>
-                              </li>
+
                               <li>
-                                  <b>{% trans "Analysis List"  %}</b>
+                                  <b>{% trans "Analysis List"  %}</b></li>
                                   <p>
                                       {% trans "Browse previously run InaSAFE analysis results and visualize the map and report products for each analysis."  %}
                                   </p>
-                              </li>
                               <li>
-                                  <b>{% trans "Metasearch" %}</b>
+                                  <b>{% trans "Metasearch" %}</b></li>
                                   <p>
                                       {% trans "Search for datasets in other online geospatial data stores that publish their catalogues using the CSW standard." %}
                                   </p>
-                              </li>
                           </ol>
                       </td>
-                      <td>
+                      <td class="column-right">
                                   <h1 class="font-green text-shade text-center" style="margin-top: 0px !important;">{% trans "What Can It Do?" %}</h1>
                           <div id='mySwipeWhat' class="swipe-what">
                               <div class='swipe-what-wrap'>
-                                  <!-- div><img width="740px" height="503px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do.png' %}"/></div -->
-                                  <div><img width="800px" height="600px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do.png' %}"/></div>
-                                  <div><img width="800px" height="600px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do_2.png' %}"/></div>
-                                  <div><img width="800px" height="600px" src="{% static 'ingc_geonode_theme/img/laptop_it_can_do_3.png' %}"/></div>
+                                  <div><img src="{% static 'ingc_geonode_theme/img/laptop_it_can_do.png' %}"/></div>
+                                  <div><img src="{% static 'ingc_geonode_theme/img/laptop_it_can_do_2.png' %}"/></div>
+                                  <div><img src="{% static 'ingc_geonode_theme/img/laptop_it_can_do_3.png' %}"/></div>
                               </div>
                           </div>
                       </td>
@@ -112,12 +109,12 @@
       <div class="white-triangle"></div>
       <div class="container padding-fifty">
           <h1>{% trans "How To Run An Analysis?" %}</h1>
-              <table>
+              <table style="width: 100%; table-layout: fixed;">
                   <tr>
-                      <td>
+                      <td class="column-left">
                           <div><img src="{% static 'ingc_geonode_theme/img/laptop-run-analysis.png' %}"/></div>
                       </td>
-                      <td style="vertical-align: top;">
+                      <td class="column-right" style="vertical-align: top;">
                           <ol style="margin: 5px 50px;">
                               <li>
                                   {% trans "Select an exposure layer (e.g. road, structure, population)" %}
@@ -189,20 +186,6 @@
 </script>
 
 <style>
-    .swipe-what {
-        overflow: hidden;
-        width: 740px;
-        position: relative;
-    }
-    .swipe-what-wrap {
-        overflow: hidden;
-        position: relative;
-    }
-    .swipe-what-wrap > div {
-        float: left;
-        width: 740px;
-        position: relative;
-    }
     img {
         width: 32px;
         height: 36px;
@@ -221,16 +204,6 @@
 
     .safe-section {
         font-size: 1.5em;
-    }
-
-    .safe-section img {
-        width: 75%;
-        height: 0%;
-    }
-
-    .what-section img {
-        width: 100%;
-        height: 100%;
     }
 
     .safe-section {
@@ -304,15 +277,6 @@
         height: 36px;
         margin-left: auto;
         margin-right: auto;
-    }
-    .what-can-do {
-        margin: 25px 0px;
-    }
-    .what-can-do ol, .what-can-do b {
-        font-size: 1.5em;
-    }
-    .what-can-do p {
-        font-size: inherit;
     }
     .white-triangle {
         background: url(../static/ingc_geonode_theme/img/white-triangle.png) no-repeat;
