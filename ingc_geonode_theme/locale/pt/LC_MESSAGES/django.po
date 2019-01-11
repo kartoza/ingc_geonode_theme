@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Rizky Maulana Nugraha <lana.pcfre@gmail.com>, 2018
-# raisserafael <raisse@yahoo.com>, 2018
-# boney bun <boney@kartoza.com>, 2018
+# Boney Bun <boney@kartoza.com>, 2018
 # Gavin Fleming <gavin@kartoza.com>, 2018
-#
+# raisserafael <raisse@yahoo.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -16,30 +16,29 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-15 04:33-0600\n"
 "PO-Revision-Date: 2018-10-09 10:02+0000\n"
-"Last-Translator: Gavin Fleming <gavin@kartoza.com>, 2018\n"
-"Language-Team: Portuguese (https://www.transifex.com/inasafe/teams/92273/"
-"pt/)\n"
-"Language: pt\n"
+"Last-Translator: raisserafael <raisse@yahoo.com>, 2018\n"
+"Language-Team: Portuguese (https://www.transifex.com/inasafe/teams/92273/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ingc_geonode_theme/settings.py:115
 msgid "hazard"
-msgstr ""
+msgstr "risco"
 
 #: ingc_geonode_theme/settings.py:118
 msgid "Select a flood layer"
-msgstr ""
+msgstr "Selecione uma camada de inundação"
 
 #: ingc_geonode_theme/settings.py:119
 msgid "Select an earthquake layer"
-msgstr ""
+msgstr "Selecione uma camada de terremoto"
 
 #: ingc_geonode_theme/settings.py:120
 msgid "Select a cyclone layer"
-msgstr ""
+msgstr "Selecione uma camada de ciclone"
 
 #: ingc_geonode_theme/templates/index.html:6
 #: ingc_geonode_theme/templates/site_index.html:6
@@ -48,11 +47,11 @@ msgstr "Bem-vindo!"
 
 #: ingc_geonode_theme/templates/index.html:15
 msgid "Realistic Natural Hazard Impact Analysis -"
-msgstr "Análise de Impacto de Risco Natural -"
+msgstr "Análise de Impacto de Risco de Desastres Naturais "
 
 #: ingc_geonode_theme/templates/index.html:16
 msgid "Contingency Planning Made Easy."
-msgstr "Planeamento de contigência rápido"
+msgstr "Planeamento de contigência rápido."
 
 #: ingc_geonode_theme/templates/index.html:29
 #: ingc_geonode_theme/templates/index.html:134
@@ -71,10 +70,10 @@ msgid ""
 "government disaster risk management through the Open Data for Resilience "
 "Initiative to provide technical assistance to INGC"
 msgstr ""
-"Esta plataforma faz parte de uma iniciativa em que o Governo de Moçambique e "
-"o Banco Mundial procuram promover o uso de dados abertos geo-espaciais para "
-"a gestão do risco de desastres, onde entre as várias atividades visa o apoio "
-"e fortalecimento técnico ao INGC"
+"Esta plataforma faz parte de uma iniciativa em que o Governo de Moçambique e"
+" o Banco Mundial procuram promover o uso de dados abertos geo-espaciais para"
+" a gestão do risco de desastres, onde entre as várias atividades visa o "
+"apoio e fortalecimento técnico ao INGC"
 
 #: ingc_geonode_theme/templates/index.html:49
 msgid ""
@@ -91,8 +90,8 @@ msgid ""
 "The aim is to improve the capacity to respond to disasters and to build the "
 "resilience of key public infrastructure in hazard-prone areas."
 msgstr ""
-"melhorando assim a sua capacidade de resposta e criação de maior resiliência "
-"nas infra-estruturas públicas em áreas propensas a riscos."
+"melhorando a sua capacidade de resposta e criação de maior resiliência nas "
+"infra-estruturas públicas em áreas propensas a riscos."
 
 #: ingc_geonode_theme/templates/index.html:72
 msgid "Perform Analysis"
@@ -100,7 +99,8 @@ msgstr "Efectue análise"
 
 #: ingc_geonode_theme/templates/index.html:74
 msgid ""
-"Perform an InaSAFE analysis using hazard and exposure data hosted on GeoNode."
+"Perform an InaSAFE analysis using hazard and exposure data hosted on "
+"GeoNode."
 msgstr ""
 "Efectue uma análise InaSAFE usando dados de risco e exposição hospedados no "
 "GeoNode."
@@ -110,8 +110,8 @@ msgid ""
 "Visualize the InaSAFE analysis results as a map and infographic, and as "
 "downloadable PDF reports."
 msgstr ""
-"Visualize os resultados da análise InaSAFE como um mapa e infográfico e como "
-"relatórios em PDF para baixar."
+"Visualize os resultados da análise InaSAFE como um mapa e infográfico e como"
+" relatórios em PDF para baixar."
 
 #: ingc_geonode_theme/templates/index.html:79
 #: ingc_geonode_theme/templates/site_base.html:75
@@ -140,7 +140,7 @@ msgstr ""
 
 #: ingc_geonode_theme/templates/index.html:93
 msgid "What Can It Do?"
-msgstr "O que é que isso pode fazer?"
+msgstr "O que se pode fazer?"
 
 #: ingc_geonode_theme/templates/index.html:114
 msgid "How To Run An Analysis?"
